@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Search App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="brand-logo"><h1>Bookish Haven </h1></div>
+      <button id="darkModeToggle">
+        <i id="darkModeIcon" class="fa fa-sun"></i>
+      </button>
+    </header>
+    <main>
+      <form id="searchForm">
+        <input type="text"id="query"placeholder="Search for books..." required/>
+        <input type="text" id="author" placeholder="Author" />
+        <input type="text" id="subject" placeholder="Subject" />
+        <input type="text" id="language" placeholder="Language" />
+        <button type="submit">Search</button>
+      </form>
+      <div id="loading" class="loading"></div>
+      <div
+        id="loadingOverlay"
+        class="loading-overlay"
+        style="display: none"
+      ></div>
+      <div id="error"></div>
+      <div id="results"></div>
+      <div id="recommended">
+        <h2>Recommended Books</h2>
+        <div id="loading" class="loading"></div>
+        <div id="recommendedBooks"></div>
+    </div>
+      <div id="pagination" class="pagination">
+        <div class="hidden">
+          <a href="#" id="prevButton">Prev</a>
+
+          <a href="#" id="nextButton">Next</a>
+        </div>
+      </div>
+    </main>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+      </div>
+    <script src="script.js"></script>
+  </body>
+</html>
